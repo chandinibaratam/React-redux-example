@@ -22,15 +22,6 @@ export default function reducer(state = { repos: [] }, action) { // setting the 
 }
 
 export function listRepos(user) {
-//   return {
-//     type: GET_REPOS,
-//     payload: {
-//       request: {
-//         url: `/users/${user}/repos`
-//       }
-//     }
-// }; https://api.github.com/users/${user}/repos
-
     return function(dispatch) {
         dispatch({type: GET_REPOS});
         axios.get(`https://itunes.apple.com/us/rss/topmovies/limit=25/json`)
